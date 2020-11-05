@@ -1,0 +1,8 @@
+<div class="row row-cols-2">
+    <event-item *ngFor="let item of events;let i=index" [currentEvent]="item" class=" col-lg-6 col-md-6 col-12" (onHidden)="onHidden(item.id)"></event-item>
+</div>
+<h3>Hidden</h3>
+<div class="row row-cols-2">
+    <event-item *ngFor="let item of hiddenEvents;let i=index" [currentEvent]="item" class=" col-lg-6 col-md-6 col-12" (onShow)="onShow(item.id)"></event-item> 
+
+</div>

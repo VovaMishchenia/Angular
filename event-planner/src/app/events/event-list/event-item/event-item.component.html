@@ -1,0 +1,15 @@
+<div class="card   border-dark mb-3 shadow-lg" style="max-width: 18rem;">
+    <div class="card-header w-100 " style="height: 75px;">{{currentEvent.date}}
+        <i *ngIf="isSelected==true" (click)="setSelected()" class="fas fa-star selected"></i>
+        <i *ngIf="isSelected==false" (click)="setSelected()" class="fas fa-star "></i>
+        <i *ngIf="isHidden==true" class="far fa-eye ml-3" (click)="show($event)"></i>
+        <i *ngIf="isHidden==false" class="far fa-eye-slash ml-3" (click)="hidden($event)"></i>
+
+    </div>
+    <img [src]="currentEvent.imgUrl" class="card-img-top " style="height: 200px;" alt="...">
+    <div class="card-body text-dark">
+      <h5 class="card-title">{{currentEvent.title}}</h5>
+      <p class="card-text">{{currentEvent.description}}</p>
+    </div>
+  </div>
+  
